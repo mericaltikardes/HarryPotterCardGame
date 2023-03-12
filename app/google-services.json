@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "516756778302",
+    "project_id": "fir-login-371f2",
+    "storage_bucket": "fir-login-371f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516756778302:android:85ba7babaa8e8280bf106f",
+        "android_client_info": {
+          "package_name": "com.mericaltikardes.harrypottercardgame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "516756778302-o4rs2ujcg0mn69jq4i1hnokklto8fcp3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5gsX987h7QFRwz7__-Wf73Kpzyl57j-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "516756778302-o4rs2ujcg0mn69jq4i1hnokklto8fcp3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
