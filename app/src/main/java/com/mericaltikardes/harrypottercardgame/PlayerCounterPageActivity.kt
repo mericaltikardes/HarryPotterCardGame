@@ -18,14 +18,6 @@ class PlayerCounterPageActivity : AppCompatActivity() {
         val playerCountCard =
             findViewById<MaterialButtonToggleGroup>(R.id.materialButtonToggleGroupCard)
         val button = findViewById<Button>(R.id.runBtn)
-        button.setOnClickListener {
-
-            val intent = Intent(this, SingleGameActivity::class.java)
-            intent.putExtra("boardSize", board)
-            startActivity(intent)
-
-        }
-
 
         playerCountCard.addOnButtonCheckedListener { _, checkedId, isChecked ->
             if (isChecked) {
@@ -57,5 +49,11 @@ class PlayerCounterPageActivity : AppCompatActivity() {
                 }
             }
         }
+        button.setOnClickListener {
+            val intent = Intent(this, SingleGameActivity::class.java)
+            intent.putExtra("boardSize", board)
+            startActivity(intent)
+        }
+
     }
 }

@@ -4,11 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mericaltikardes.harrypottercardgame.RecyclerViewAdapter.*
@@ -20,42 +17,20 @@ class SingleGameActivity : AppCompatActivity() {
 
     }
 
-    private lateinit var clRoot: ConstraintLayout
     private var numPairsFound = 0
-
     private var indexOfSingleSelectedCard: Int? = null
     private lateinit var cardMemory: List<CardsDatasSituation>
     private lateinit var recyclerViewCard: RecyclerView
-    private var remainingTime: TextView? = null
-    private lateinit var point: TextView
-
     private lateinit var board: BoardCardSize
-    private lateinit var adapter: RecyclerViewAdapter
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_player_counter_page)
 
-        val fourCardButton = findViewById<Button>(R.id.fourCard)
-        fourCardButton.setOnClickListener {
-            board = BoardCardSize.FOUR
-            createGame()
-        }
-
-        val sixteenCardButton = findViewById<Button>(R.id.sixteenCard)
-        sixteenCardButton.setOnClickListener {
-            board = BoardCardSize.SIXTEEN
-            createGame()
-        }
-
-        val thirtySixCardButton = findViewById<Button>(R.id.thirtySixCard)
-        thirtySixCardButton.setOnClickListener {
-            board = BoardCardSize.TWENTFOUR
-            createGame()
-        }
+        board = intent.getSerializableExtra("boardSize") as BoardCardSize
+        createGame()
     }
+
 
     fun createGame() {
         setContentView(R.layout.activity_single_game)
@@ -132,10 +107,7 @@ class SingleGameActivity : AppCompatActivity() {
         //recycler view eğer dinamik veriden oluşuyorsa bu sayede veri daha optimize çalışıyormuş !!!!
         recyclerViewCard.setHasFixedSize(true)
         recyclerViewCard.layoutManager = GridLayoutManager(this, board.getWidth())
-
-
     }
-
 
     private fun updateGameWithFlip(position: Int): Boolean {
         val card = cardMemory[position]
@@ -152,9 +124,7 @@ class SingleGameActivity : AppCompatActivity() {
         }
         card?.faceup = !card.faceup
         return foundMatch
-
     }
-
 
     @SuppressLint("SuspiciousIndentation")
     private fun checkForMatch(position1: Int, position2: Int): Boolean {
@@ -175,7 +145,6 @@ class SingleGameActivity : AppCompatActivity() {
 
         return true
     }
-
 
     private fun restoreCards() {
         for (card in cardMemory) {
