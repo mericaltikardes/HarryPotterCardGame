@@ -16,14 +16,14 @@
         android:theme="@style/Theme.HarryPotterCardGame"
         tools:targetApi="31">
         <activity
-            android:name=".CongratulationsPageActivity"
+            android:name=".activities.CongratulationsPageActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SingleGameActivity"
+            android:name=".activities.SingleGameActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -37,14 +37,14 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".PlayerCounterPageActivity"
+            android:name=".activities.PlayerCounterPageActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ForgotPasswordActivity"
+            android:name=".activities.ForgotPasswordActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

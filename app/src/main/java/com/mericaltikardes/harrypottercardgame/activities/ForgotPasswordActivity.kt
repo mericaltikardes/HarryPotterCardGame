@@ -1,4 +1,4 @@
-package com.mericaltikardes.harrypottercardgame
+package com.mericaltikardes.harrypottercardgame.activities
 
 import android.os.Bundle
 import android.widget.Button
@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.mericaltikardes.harrypottercardgame.R
 
 class ForgotPasswordActivity : AppCompatActivity() {
     private lateinit var fAuth: FirebaseAuth

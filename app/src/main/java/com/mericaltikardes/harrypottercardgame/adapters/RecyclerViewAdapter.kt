@@ -1,4 +1,4 @@
-package com.mericaltikardes.harrypottercardgame
+package com.mericaltikardes.harrypottercardgame.adapters
 
 import android.content.Context
 import android.util.Log
@@ -8,6 +8,9 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.mericaltikardes.harrypottercardgame.utils.BoardCardSize
+import com.mericaltikardes.harrypottercardgame.CardsDatasSituation
+import com.mericaltikardes.harrypottercardgame.R
 import kotlin.math.min
 
 class RecyclerViewAdapter(

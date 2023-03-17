@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginPage"
-        android:name="com.mericaltikardes.harrypottercardgame.LoginPage"
+        android:name="com.mericaltikardes.harrypottercardgame.fragments.LoginPage"
         android:label="fragment_login_page"
         tools:layout="@layout/fragment_login_page" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.mericaltikardes.harrypottercardgame.RegisterFragment"
+        android:name="com.mericaltikardes.harrypottercardgame.fragments.RegisterFragment"
         android:label="RegisterFragment" >
         <action
             android:id="@+id/action_registerFragment_to_loginPage"

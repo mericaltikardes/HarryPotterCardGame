@@ -1,4 +1,4 @@
-package com.mericaltikardes.harrypottercardgame
+package com.mericaltikardes.harrypottercardgame.fragments
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -15,6 +15,7 @@ import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.mericaltikardes.harrypottercardgame.R
 
 
 class RegisterFragment : Fragment() {
@@ -48,7 +49,8 @@ class RegisterFragment : Fragment() {
         fAuth = Firebase.auth
         //for fragment
         loginButton.setOnClickListener {
-            val action = RegisterFragmentDirections.actionRegisterFragmentToLoginPage()
+            val action =
+                com.mericaltikardes.harrypottercardgame.fragments.RegisterFragmentDirections.actionRegisterFragmentToLoginPage()
             Navigation.findNavController(it).navigate(action)
         }
         //fopr data is empty or confirmed
@@ -66,7 +68,8 @@ class RegisterFragment : Fragment() {
         ).addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 Toast.makeText(context, "Register Successful", Toast.LENGTH_SHORT).show()
-                val action = RegisterFragmentDirections.actionRegisterFragmentToLoginPage()
+                val action =
+                    com.mericaltikardes.harrypottercardgame.fragments.RegisterFragmentDirections.actionRegisterFragmentToLoginPage()
                 //  activity?.findNavController()?.navigate(action)
                 findNavController(this).navigate(action)
                 //   Navigation.findNavController(requireActivity(),R.id.navigation).navigate(action)

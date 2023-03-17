@@ -1,4 +1,4 @@
-package com.mericaltikardes.harrypottercardgame
+package com.mericaltikardes.harrypottercardgame.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -16,6 +16,9 @@ import androidx.navigation.Navigation
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.mericaltikardes.harrypottercardgame.R
+import com.mericaltikardes.harrypottercardgame.activities.ForgotPasswordActivity
+import com.mericaltikardes.harrypottercardgame.activities.PlayerCounterPageActivity
 
 
 class LoginPage : Fragment() {
@@ -49,7 +52,8 @@ class LoginPage : Fragment() {
         //For register Fragment
         val registerBtn = view.findViewById<Button>(R.id.loginPageRegisterButton)
         registerBtn.setOnClickListener {
-            val action = LoginPageDirections.actionLoginPageToRegisterFragment()
+            val action =
+                com.mericaltikardes.harrypottercardgame.fragments.LoginPageDirections.actionLoginPageToRegisterFragment()
             Navigation.findNavController(it).navigate(action)
         }
         val forgotPassword = view.findViewById<TextView>(R.id.textViewForgotPasssword)

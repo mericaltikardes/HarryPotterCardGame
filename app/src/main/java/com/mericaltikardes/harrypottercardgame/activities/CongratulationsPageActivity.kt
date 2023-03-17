@@ -1,8 +1,8 @@
-package com.mericaltikardes.harrypottercardgame
+package com.mericaltikardes.harrypottercardgame.activities
 
 import android.os.Bundle
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.mericaltikardes.harrypottercardgame.R
 
 class CongratulationsPageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

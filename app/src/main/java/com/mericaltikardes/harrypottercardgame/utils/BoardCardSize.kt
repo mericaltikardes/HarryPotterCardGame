@@ -1,4 +1,4 @@
-package com.mericaltikardes.harrypottercardgame
+package com.mericaltikardes.harrypottercardgame.utils
 
 
 enum class BoardCardSize(val cardSize: Int) {

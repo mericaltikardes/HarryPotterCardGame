@@ -1,4 +1,4 @@
-package com.mericaltikardes.harrypottercardgame
+package com.mericaltikardes.harrypottercardgame.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -8,7 +8,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.mericaltikardes.harrypottercardgame.RecyclerViewAdapter.*
+import com.mericaltikardes.harrypottercardgame.utils.BoardCardSize
+import com.mericaltikardes.harrypottercardgame.CardsDatasSituation
+import com.mericaltikardes.harrypottercardgame.R
+import com.mericaltikardes.harrypottercardgame.adapters.RecyclerViewAdapter
+import com.mericaltikardes.harrypottercardgame.adapters.RecyclerViewAdapter.*
 
 class SingleGameActivity : AppCompatActivity() {
 
